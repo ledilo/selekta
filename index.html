@@ -1,58 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Redireccionando a WhatsApp...</title>
-  <meta name="robots" content="noindex, nofollow">
-  <script>
-    function isBot() {
-      const ua = navigator.userAgent.toLowerCase();
-      const botPatterns = [
-        "bot", "crawl", "slurp", "spider", "facebook", "meta", "whatsapp",
-        "headless", "python", "curl", "wget", "axios"
-      ];
-      return botPatterns.some(p => ua.includes(p));
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SELEKTA Vapes Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0e0e0e;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
     }
-
-    function detectHeadless() {
-      return navigator.webdriver || false;
+    .hero {
+      padding: 40px 20px;
     }
-
-    function safeRedirect() {
-      const parts = [
-        "aHR0cHM6Ly93YQ==",       // "https://wa"
-        "Lm1lLw==",               // ".me/"
-        "NTQ5MjYxNTAwMjIwOQ==",   // nuevo número: 5492615002209 (Base64)
-        "P3RleHQ9SG9sYSwlMjB2ZW5nbyUyMGRlJTIwbGElMjBwdWJsaWNpZGFk" // "?text=Hola, vengo de la publicidad"
-      ];
-
-      function decode(base64) {
-        return decodeURIComponent(atob(base64).split('').map(c =>
-          '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
-        ).join(''));
-      }
-
-      const url = parts.map(decode).join('');
-      setTimeout(() => eval(`window.location.href = '${url}'`), 1500);
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
     }
-
-    window.onload = function () {
-      if (isBot() || detectHeadless()) {
-        document.body.innerHTML = '<p style="text-align:center; margin-top:100px; font-family:sans-serif;">Cargando...</p>';
-      } else {
-        safeRedirect();
-      }
-    };
-  </script>
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+    .sub {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+    .cta-button {
+      background: #d4af37;
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: #b8932d;
+    }
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-  <noscript>
-    <p style="text-align: center; margin-top: 100px; font-family: sans-serif;">
-      Esta página requiere JavaScript para continuar.
-    </p>
-  </noscript>
-  <p style="text-align: center; margin-top: 100px; font-family: sans-serif;">
-    Redireccionando a WhatsApp...
-  </p>
+
+  <div class="hero">
+    <img src="logo.png" alt="SELEKTA" class="logo" />
+    <h1>Vapes Torch & Perfumes Exclusivos</h1>
+    <p class="sub">Envíos rápidos a todo Mendoza</p>
+    <a href="https://wa.me/549261XXXXXXX?text=Hola%20SELEKTA,%20quiero%20comprar%20vapers!" class="cta-button">🔥 Pedir por WhatsApp</a>
+  </div>
+
+  <div class="footer">
+    © 2025 SELEKTA. Todos los derechos reservados.
+  </div>
+
 </body>
 </html>
