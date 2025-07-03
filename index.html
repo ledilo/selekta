@@ -3,64 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SELEKTA Vapers Premium</title>
+  <title>SELEKTA Vapes Premium</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #0b0b0b;
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
-      text-align: center;
+    :root {
+      --gold: #d4af37;
+      --bg-dark: #0a0a0a;
+      --whatsapp-green: #25D366;
     }
 
-    .hero {
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      padding: 20px;
     }
 
     .logo {
-      max-width: 180px;
-      margin-bottom: 20px;
-    }
-
-    .vaper {
-      max-width: 220px;
-      margin: 30px 0;
-      filter: drop-shadow(0 0 10px #d4af37aa);
+      max-width: 200px;
+      margin: 0 auto 25px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.3em;
-      color: #d4af37;
-      margin: 10px 0;
+      color: var(--gold);
+      font-size: 2em;
+      margin-bottom: 10px;
     }
 
     .sub {
-      font-size: 1.1em;
       color: #ccc;
-      margin-bottom: 25px;
+      font-size: 1em;
+      margin-bottom: 30px;
+    }
+
+    .vaper {
+      width: 180px;
+      margin: 20px auto;
+      filter: drop-shadow(0 0 12px var(--gold));
     }
 
     .cta-button {
-      background: #25D366;
-      color: #000;
-      padding: 15px 30px;
-      border: none;
-      font-size: 1.3em;
-      font-weight: bold;
-      border-radius: 50px;
-      cursor: pointer;
-      text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      background-color: var(--whatsapp-green);
+      color: #000;
+      font-size: 1.1em;
+      font-weight: bold;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 0 20px #25d366aa;
       transition: transform 0.2s ease;
-      box-shadow: 0 0 15px #25D366aa;
     }
 
     .cta-button:hover {
@@ -73,27 +76,41 @@
     }
 
     .footer {
-      margin-top: 50px;
+      margin-top: 40px;
       font-size: 0.9em;
       color: #666;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.7em;
+      }
+
+      .vaper {
+        width: 150px;
+      }
+
+      .cta-button {
+        font-size: 1em;
+        padding: 12px 25px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <img src="logo.png" alt="SELEKTA" class="logo" />
+  <img src="logo.png" alt="Logo SELEKTA" class="logo" />
 
-    <h1>Vapes Torch</h1>
-    <p class="sub">🔥 Productos exclusivos • Envíos en el día a todo Mendoza</p>
+  <h1>Vapes Torch</h1>
+  <p class="sub">🔥 Productos exclusivos • Envíos en el día a todo Mendoza</p>
 
-    <img src="vaper.png" alt="Vaper Torch" class="vaper" />
+  <img src="vaper.png" alt="Vaper Torch" class="vaper" />
 
-    <a href="https://wa.me/549261XXXXXXX?text=Hola%20SELEKTA,%20quiero%20info%20sobre%20los%20vapes!" class="cta-button">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" />
-      WhatsApp
-    </a>
-  </div>
+  <br><br>
+  <a href="https://wa.me/549261XXXXXXX?text=Hola%20SELEKTA,%20quiero%20comprar%20vapers!" class="cta-button">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" />
+    WhatsApp
+  </a>
 
   <div class="footer">
     © 2025 SELEKTA • Todos los derechos reservados
