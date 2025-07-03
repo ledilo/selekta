@@ -116,6 +116,15 @@
         padding: 12px 25px;
       }
     }
+    @keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 10px #25d366aa; }
+  50% { transform: scale(1.05); box-shadow: 0 0 25px #25d366; }
+  100% { transform: scale(1); box-shadow: 0 0 10px #25d366aa; }
+}
+
+.cta-button {
+  animation: pulse 1.5s infinite;
+}
   </style>
 </head>
 <body>
