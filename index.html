@@ -17,12 +17,12 @@
       s.parentNode.insertBefore(t,s)
     }(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1771404050443652');
+    fbq('init', '2828389667353907');
     fbq('track', 'PageView');
   </script>
   <noscript>
     <img height="1" width="1"
-    src="https://www.facebook.com/tr?id=1771404050443652&ev=PageView&noscript=1"/>
+    src="https://www.facebook.com/tr?id=2828389667353907&ev=PageView&noscript=1"/>
   </noscript>
 
   <style>
@@ -123,20 +123,16 @@
   </div>
 
   <script>
-    // Número en Base64 (5492617263841)
+    // Número en Base64: 5492617263841
     const encoded = "NTQ5MjYxNzI2Mzg0MQ==";
-    const decoded = atob(encoded);
-
-    // Mensaje prellenado
+    const numero = atob(encoded);
     const mensaje = encodeURIComponent("Hola, quiero más información");
-
-    // Armar link completo
-    const waLink = `https://wa.me/${decoded}?text=${mensaje}`;
+    const enlaceWhatsApp = `https://wa.me/${numero}?text=${mensaje}`;
 
     const btn = document.getElementById('whatsappBtn');
-    btn.href = waLink;
+    btn.href = enlaceWhatsApp;
     btn.onclick = function () {
-      fbq('track', 'Purchase', { value: 0.00, currency: 'USD' });
+      fbq('track', 'Subscribe');
     };
   </script>
 
