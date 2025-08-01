@@ -48,7 +48,14 @@
 
     .logo {
       max-width: 200px;
-      margin: 0 auto 50px;
+      margin: 0 auto 30px;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      margin-bottom: 30px;
     }
 
     .cta-button {
@@ -90,6 +97,9 @@
     }
 
     @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6em;
+      }
       .cta-button {
         font-size: 1em;
         padding: 12px 25px;
@@ -101,9 +111,11 @@
 
   <img src="logo.png" alt="Logo SELEKTA" class="logo" />
 
+  <h1>Obtené más información</h1>
+
   <a id="whatsappBtn" class="cta-button" href="#">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" />
-    Obtené más información
+    WhatsApp
   </a>
 
   <div class="footer">
@@ -111,10 +123,9 @@
   </div>
 
   <script>
-    // Número codificado en Base64
+    // Número en Base64: 5492617263841
     const encoded = "NTQ5MjYxNzI2Mzg0MQ==";
-
-    const decoded = atob(encoded); // decodificamos
+    const decoded = atob(encoded);
     const waLink = `https://wa.me/${decoded}`;
 
     const btn = document.getElementById('whatsappBtn');
