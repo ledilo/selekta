@@ -24,7 +24,6 @@
     <img height="1" width="1"
     src="https://www.facebook.com/tr?id=1771404050443652&ev=PageView&noscript=1"/>
   </noscript>
-  <!-- End Facebook Pixel Code -->
 
   <style>
     :root {
@@ -102,7 +101,7 @@
 
   <img src="logo.png" alt="Logo SELEKTA" class="logo" />
 
-  <a href="https://wa.me/5492617263841" class="cta-button" onclick="fbq('track', 'Purchase', {value: 0.00, currency: 'USD'});">
+  <a id="whatsappBtn" class="cta-button" href="#">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" />
     Obtené más información
   </a>
@@ -110,6 +109,20 @@
   <div class="footer">
     © 2025 SELEKTA • Todos los derechos reservados
   </div>
+
+  <script>
+    // Número codificado en Base64
+    const encoded = "NTQ5MjYxNzI2Mzg0MQ==";
+
+    const decoded = atob(encoded); // decodificamos
+    const waLink = `https://wa.me/${decoded}`;
+
+    const btn = document.getElementById('whatsappBtn');
+    btn.href = waLink;
+    btn.onclick = function () {
+      fbq('track', 'Purchase', { value: 0.00, currency: 'USD' });
+    };
+  </script>
 
 </body>
 </html>
