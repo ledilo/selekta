@@ -123,10 +123,15 @@
   </div>
 
   <script>
-    // Número en Base64: 5492617263841
+    // Número en Base64 (5492617263841)
     const encoded = "NTQ5MjYxNzI2Mzg0MQ==";
     const decoded = atob(encoded);
-    const waLink = `https://wa.me/${decoded}`;
+
+    // Mensaje prellenado
+    const mensaje = encodeURIComponent("Hola, quiero más información");
+
+    // Armar link completo
+    const waLink = `https://wa.me/${decoded}?text=${mensaje}`;
 
     const btn = document.getElementById('whatsappBtn');
     btn.href = waLink;
