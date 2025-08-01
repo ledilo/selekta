@@ -44,31 +44,12 @@
       color: white;
       font-family: 'Roboto', sans-serif;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
     .logo {
       max-width: 200px;
-      margin: 0 auto 25px;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      color: var(--gold);
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    .sub {
-      color: #ccc;
-      font-size: 1em;
-      margin-bottom: 30px;
-    }
-
-    .vaper {
-      width: 180px;
-      margin: 20px auto;
-      filter: drop-shadow(0 0 12px var(--gold));
+      margin: 0 auto 50px;
     }
 
     .cta-button {
@@ -85,6 +66,7 @@
       text-decoration: none;
       box-shadow: 0 0 20px #25d366aa;
       transition: transform 0.2s ease;
+      animation: pulse 1.5s infinite;
     }
 
     .cta-button:hover {
@@ -102,42 +84,27 @@
       color: #666;
     }
 
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 10px #25d366aa; }
+      50% { transform: scale(1.05); box-shadow: 0 0 25px #25d366; }
+      100% { transform: scale(1); box-shadow: 0 0 10px #25d366aa; }
+    }
+
     @media (max-width: 600px) {
-      h1 {
-        font-size: 1.7em;
-      }
-
-      .vaper {
-        width: 150px;
-      }
-
       .cta-button {
         font-size: 1em;
         padding: 12px 25px;
       }
     }
-    @keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 10px #25d366aa; }
-  50% { transform: scale(1.05); box-shadow: 0 0 25px #25d366; }
-  100% { transform: scale(1); box-shadow: 0 0 10px #25d366aa; }
-}
-
-.cta-button {
-  animation: pulse 1.5s infinite;
-}
   </style>
 </head>
 <body>
 
   <img src="logo.png" alt="Logo SELEKTA" class="logo" />
 
-  <h1>Productos Premium</h1>
-  <p class="sub">🔥 Envíos en el día a todo Mendoza</p>
-
-  <br><br>
-  <a href="https://redi-selekta.vercel.app" class="cta-button" onclick="fbq('track', 'Purchase', {value: 0.00, currency: 'USD'});">
+  <a href="https://wa.me/5492617263841" class="cta-button" onclick="fbq('track', 'Purchase', {value: 0.00, currency: 'USD'});">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" />
-    WhatsApp
+    Obtené más información
   </a>
 
   <div class="footer">
